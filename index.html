@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color box</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .has-children{
+            list-style: none;
+        }
+        li{
+            border: 1px solid black;
+            width: 6em;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="has-children">
+            <li>1st child</li>
+            <li>2nd child</li>
+            <li>3rd child</li>
+            <li>4th child</li>
+            <li>5th child</li>
+            <li>6th child</li>
+            <li>7th child</li>
+            <li>8th child</li>
+            <li>9th child</li>
+            <li>10th child</li>
+            <li>11th child</li>
+            <li>12th child</li>
+            <li>13th child</li>
+            <li>14th child</li>
+            <li>15th child</li>
+            <li>16th child</li>
+            <li>17th child</li>
+        </ul>
+        <button onclick="changeColor()">Click here to change the color</button>
+    </div>
+
+    <script>
+        var listItem = document.getElementsByTagName("li");
+        function changeColor(){
+            listItem[0].style.background = "blue";
+            listItem[0].style.color = "white";
+            listItem[8].style.background = "green";
+            listItem[8].style.color = "white";
+            for(let i = 0;i < listItem.length;i++){
+                if(i%2 != 0){
+                    listItem[i].style.backgroundColor = "lime";
+                    listItem[i].style.color = "white";
+                }
+                listItem[listItem.length-1].style.backgroundColor = "palevioletred";
+                listItem[listItem.length-1].style.color = "white";
+            }
+        }
+    </script>
+</body>
+</html>
